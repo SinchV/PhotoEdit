@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding"
+    tools:context=".OpenGallery">
+
+    <ImageView
+        android:id="@+id/selectedImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop" />
+
+    <Button
+        android:id="@+id/flipVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectedImage"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:drawableLeft="@drawable/flipvertical"
+        android:gravity="center_horizontal|center_vertical" />
+
+    <Button
+        android:id="@+id/flipHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectedImage"
+        android:layout_toEndOf="@+id/flipVertical"
+        android:layout_toRightOf="@+id/flipVertical"
+        android:drawableLeft="@drawable/flip_horizontal"
+        android:gravity="center_horizontal|center_vertical" />
+
+    <Button
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectedImage"
+        android:layout_toEndOf="@+id/flipHorizontal"
+        android:layout_toRightOf="@+id/flipHorizontal"
+        android:drawableLeft="@drawable/info"
+        android:gravity="center_horizontal|center_vertical" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/selectedImage"
+        android:layout_toEndOf="@+id/detail"
+        android:layout_toRightOf="@+id/detail"
+        android:drawableLeft="@drawable/save"
+        android:gravity="center_horizontal|center_vertical" />
+
+    <TextView
+        android:id="@+id/detailsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/save"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@dimen/padding20"
+        android:textSize="@dimen/textsize"></TextView>
+
+</RelativeLayout>
